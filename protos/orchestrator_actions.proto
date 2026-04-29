@@ -22,9 +22,6 @@ message ScheduleTaskAction {
 
     // History propagation scope. Absent/SCOPE_NONE = no propagation.
     optional HistoryPropagationScope historyPropagationScope = 6;
-
-    // inProcess is set by the sidecar when the activity should run in-process.
-    bool inProcess = 7;
 }
 
 message CreateChildWorkflowAction {
@@ -36,9 +33,6 @@ message CreateChildWorkflowAction {
 
     // History propagation scope. Absent/SCOPE_NONE = no propagation.
     optional HistoryPropagationScope historyPropagationScope = 6;
-
-    // inProcess is set by the sidecar at creation time when the workflow runs in-process.
-    bool inProcess = 7;
 }
 
 message CreateTimerAction {
